@@ -1,4 +1,13 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Patterns
+
+- atomic-design
+- ducks-pattern
+- config-pattern
+
+## Packages
+
+- @borealisgroup/eslint-config
+- @borealisgroup/stylelint-config
 
 ## Available Scripts
 
