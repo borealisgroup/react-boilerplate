@@ -5,12 +5,16 @@
   "scripts": {
     "start": "cross-env NODE_PATH=src react-scripts start",
     "build": "cross-env NODE_PATH=src react-scripts build",
+    "rebuild": "npm run clean && npm install && npm run build",
     "lint-css": "stylelint \"src/**/*.{js,jsx}\"",
     "lint-js": "eslint --ext .js --ext .jsx src",
     "lint": "npm-run-all lint-js lint-css",
     "test": "react-scripts test --modulePaths=src",
+    "test:coverage": "react-scripts test --coverage --modulePaths=src",
+    "validate": "npm-run-all lint test",
     "eject": "react-scripts eject",
-    "validate": "npm-run-all lint test"
+    "clean": "rm -rf node_modules",
+    "reinstall": "npm run clean && npm install"
   },
   "husky": {
     "hooks": {
