@@ -16,7 +16,7 @@
     "clean": "rm -rf node_modules",
     "reinstall": "npm run clean && npm install",
     "analyze:ci": "source-map-explorer --html 'build/static/js/*.js' > source-map-result.html",
-    "analyze": "source-map-explorer 'build/static/js/*.js'"
+    "analyze": "npm run build && source-map-explorer 'build/static/js/*.js'"
   },
   "husky": {
     "hooks": {
