@@ -93,3 +93,6 @@ public/css
 public/img/
 styles/svgsprite/
 styles/yarn.lock
+
+# Performance reports
+source-map-result.html
