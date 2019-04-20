@@ -1,8 +1,6 @@
 const baseUrl = process.env.REACT_APP_BASE_URL;
 
-// REST naming conventions: get, post, put, delete
-
-export const getTasks = () => {
+export const fetchTasks = () => {
   return fetch(baseUrl).then(res => res.json());
 };
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import LoginButton from './LoginButton';
@@ -6,9 +6,9 @@ import LoginButton from './LoginButton';
 // import loginSubmit action from the store
 
 export const LoginButtonContainer = ({ onLoginSubmit, ...props }) => {
-  const onClick = () => {
+  const onClick = useCallback(() => {
     onLoginSubmit();
-  };
+  }, [onLoginSubmit]);
 
   return <LoginButton {...props} onClick={onClick} />;
 };

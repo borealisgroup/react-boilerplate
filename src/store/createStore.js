@@ -7,10 +7,6 @@ import { createLogger } from 'redux-logger';
 import { ENV } from 'config/env.config';
 import createRootReducer from './rootReducer';
 
-/**
- * Create Redux store
- */
-
 export const history = createBrowserHistory();
 
 const enhancers = [];

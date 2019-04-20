@@ -6,12 +6,12 @@ import {
   taskReplace,
   taskRemove,
 } from './task.duck';
-import { getTasks, postTask, putTask, deleteTask } from './task.services';
+import { fetchTasks, postTask, putTask, deleteTask } from './task.services';
 
 export const taskFetch = () => {
   return dispatch => {
     dispatch(taskShowLoader());
-    getTasks().then(tasks => {
+    fetchTasks().then(tasks => {
       dispatch(taskLoad(tasks));
       dispatch(taskHideLoader());
     });
