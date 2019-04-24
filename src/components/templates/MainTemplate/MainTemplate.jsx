@@ -5,9 +5,10 @@ const Wrapper = styled.main``;
 const HeaderWrapper = styled.div``;
 const ContentWrapper = styled.div``;
 
-const MainTemplate = ({ header, content, ...props }) => (
+const MainTemplate = ({ header, sidebar, content, ...props }) => (
   <Wrapper {...props}>
     <HeaderWrapper>{header}</HeaderWrapper>
+    {sidebar}
     <ContentWrapper>{content}</ContentWrapper>
   </Wrapper>
 );

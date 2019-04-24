@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Button } from 'antd';
 import { ReactComponent as Logo } from 'assets/icons/logo.svg';
 
 const Wrapper = styled.div`
@@ -31,6 +32,7 @@ const HomeContent = () => (
     <p>
       Edit <code>src/components/App.js</code> and save to reload.
     </p>
+    <Button type="primary">Test</Button>
     <Link href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
       Learn React
     </Link>

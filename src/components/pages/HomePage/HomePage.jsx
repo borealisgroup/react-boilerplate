@@ -1,8 +1,12 @@
 import React from 'react';
-import { HomeContent, MainTemplate, Header } from 'components';
+import { HomeContent, MainTemplate, Header, Sidebar } from 'components';
 
 const HomePage = () => (
-  <MainTemplate header={<Header />} content={<HomeContent />} />
+  <MainTemplate
+    header={<Header />}
+    sidebar={<Sidebar />}
+    content={<HomeContent />}
+  />
 );
 
 export default HomePage;
