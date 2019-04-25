@@ -30,6 +30,7 @@
     ]
   },
   "dependencies": {
+    "@borealisgroup/theme": "^1.6.2",
     "connected-react-router": "6.4.0",
     "cross-env": "5.2.0",
     "react": "^16.8.6",

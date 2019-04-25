@@ -10,19 +10,22 @@ const Wrapper = styled.div`
   text-align: center;
 
   min-height: 100vh;
-  color: white;
-  background-color: #282c34;
-  font-size: calc(10px + 2vmin);
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.primary};
+  font-size: ${({ theme }) => theme.fontSizes.sm};
 `;
 
 const StyledLogo = styled(Logo)`
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
+  * {
+    fill: ${({ theme }) => theme.colors.tertiary};
+  }
 `;
 
 const Link = styled.a`
-  color: #61dafb;
+  color: ${({ theme }) => theme.colors.tertiary};
 `;
 
 const HomeContent = () => (
