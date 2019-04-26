@@ -12,7 +12,7 @@ const Wrapper = styled.div`
   min-height: 100vh;
   color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.primary};
-  font-size: ${({ theme }) => theme.fontSizes.sm};
+  font-size: ${({ theme }) => theme.fontSizes[2]};
 `;
 
 const StyledLogo = styled(Logo)`

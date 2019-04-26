@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledLabel = styled.span`
-  font-size: ${({ theme }) => theme.fontSizes.xs};
+  font-size: ${({ theme }) => theme.fontSizes[1]};
 `;
 
 const Label = ({ text }) => <StyledLabel>{text}</StyledLabel>;
