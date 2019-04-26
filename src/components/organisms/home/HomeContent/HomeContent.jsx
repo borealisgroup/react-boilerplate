@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   text-align: center;
 
   min-height: 100vh;
-  color: ${({ theme }) => theme.colors.white};
+  color: ${({ theme }) => theme.colors.whitefade[0]};
   background-color: ${({ theme }) => theme.colors.primary};
   font-size: ${({ theme }) => theme.fontSizes[2]};
 `;
