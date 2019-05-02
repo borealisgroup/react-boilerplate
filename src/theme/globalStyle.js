@@ -15,7 +15,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     position: relative;
     font-family: ${({ theme }) => theme.fonts.primary};
-    font-size: ${({ theme }) => theme.fontSizes.lg};
+    font-size: ${({ theme }) => `${theme.fontSizes[1]}px`};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
