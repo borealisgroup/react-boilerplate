@@ -1,16 +1,15 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'connected-react-router';
-import { Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
-import store, { history } from 'store/createStore';
-import theme from 'theme/defaultTheme';
+import store from 'store/createStore';
+import theme from 'theme/theme';
 import GlobalStyle from 'theme/globalStyle';
 import { HomePage } from 'components';
 
 const App = () => (
   <Provider store={store}>
-    <ConnectedRouter history={history}>
+    <BrowserRouter>
       <ThemeProvider theme={theme}>
         <>
           <GlobalStyle />
@@ -19,7 +18,7 @@ const App = () => (
           </Switch>
         </>
       </ThemeProvider>
-    </ConnectedRouter>
+    </BrowserRouter>
   </Provider>
 );
 
