@@ -1,10 +1,10 @@
 import React from 'react';
-import { HomeContent, MainTemplate, Header, Sidebar } from 'components';
+import { HomeContent, MainTemplate, Header } from 'components';
 
 const HomePage = () => (
   <MainTemplate
     header={<Header />}
-    sidebar={<Sidebar />}
+    // sidebar={<Sidebar />}
     content={<HomeContent />}
   />
 );

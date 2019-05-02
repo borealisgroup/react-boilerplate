@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button } from 'antd';
 import { ReactComponent as Logo } from 'assets/icons/logo.svg';
 
 const Wrapper = styled.div`
@@ -11,19 +10,22 @@ const Wrapper = styled.div`
   text-align: center;
 
   min-height: 100vh;
-  color: white;
-  background-color: #282c34;
-  font-size: calc(10px + 2vmin);
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.darkblue[6]};
+  font-size: ${({ theme }) => theme.fontSizes[2]};
 `;
 
 const StyledLogo = styled(Logo)`
   animation: App-logo-spin infinite 20s linear;
   height: 40vmin;
   pointer-events: none;
+  * {
+    fill: ${({ theme }) => theme.colors.tertiary};
+  }
 `;
 
 const Link = styled.a`
-  color: #61dafb;
+  color: ${({ theme }) => theme.colors.tertiary};
 `;
 
 const HomeContent = () => (
@@ -32,7 +34,7 @@ const HomeContent = () => (
     <p>
       Edit <code>src/components/App.js</code> and save to reload.
     </p>
-    <Button type="primary">Test</Button>
+    {/* <Button type="primary">Test</Button> */}
     <Link href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
       Learn React
     </Link>

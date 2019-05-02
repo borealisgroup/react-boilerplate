@@ -1,8 +1,6 @@
-export default {
-  primary: '#002d5a',
+import { borealis } from '@borealisgroup/theme';
 
-  fonts: {
-    primary: "'Open Sans', sans-serif",
-    size: '16px',
-  },
+export default {
+  ...borealis,
+  // overide default theme here
 };
