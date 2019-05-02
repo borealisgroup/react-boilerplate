@@ -10,9 +10,9 @@ const Wrapper = styled.div`
   text-align: center;
 
   min-height: 100vh;
-  color: ${({ theme }) => theme.colors.whitefade[0]};
-  background-color: ${({ theme }) => theme.colors.primary};
-  font-size: ${({ theme }) => theme.fontSizes[2]};
+  color: ${({ theme }) => theme.colors.white};
+  background-color: ${({ theme }) => theme.colors.darkblue[6]};
+  font-size: ${({ theme }) => `${theme.fontSizes[3]}px`};
 `;
 
 const StyledLogo = styled(Logo)`
