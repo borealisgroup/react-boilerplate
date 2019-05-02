@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { ReactComponent as Logo } from 'assets/icons/logo.svg';
+import { Borealis } from '@borealisgroup/components';
 
 const Wrapper = styled.div`
   display: flex;
@@ -10,17 +10,17 @@ const Wrapper = styled.div`
   text-align: center;
 
   min-height: 100vh;
-  color: ${({ theme }) => theme.colors.whitefade[0]};
+  color: ${({ theme }) => theme.colors.white};
   background-color: ${({ theme }) => theme.colors.primary};
-  font-size: ${({ theme }) => theme.fontSizes[2]};
+  font-size: ${({ theme }) => theme.fontSizesFluid[2]};
 `;
 
-const StyledLogo = styled(Logo)`
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+const StyledLogo = styled(Borealis)`
+  height: 80px;
   pointer-events: none;
-  * {
-    fill: ${({ theme }) => theme.colors.tertiary};
+  margin-bottom: ${({ theme }) => theme.space[4]}px;
+  path {
+    fill: ${({ theme }) => theme.colors.white};
   }
 `;
 
@@ -30,7 +30,7 @@ const Link = styled.a`
 
 const HomeContent = () => (
   <Wrapper>
-    <StyledLogo />
+    <StyledLogo tagline={false} />
     <p>
       Edit <code>src/components/App.js</code> and save to reload.
     </p>
