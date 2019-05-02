@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "cross-env NODE_PATH=src rescripts start",
-    "build": "cross-env NODE_PATH=src rescripts build",
+    "start": "rescripts start",
+    "build": "rescripts build",
     "rebuild": "npm run clean && npm install && npm run build",
     "lint-css": "stylelint \"src/**/*.{js,jsx}\"",
     "lint-js": "eslint --ext .js --ext .jsx src",
