@@ -1,8 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
+const Wrapper = styled.div`
+  width: 100%;
+`;
+
 const Label = styled.label`
+  display: block;
   color: ${({ theme }) => theme.colors.primary};
+  margin-bottom: ${({ theme }) => theme.space[1]}px;
 `;
 
 const Input = styled.input`
@@ -21,10 +27,10 @@ const Input = styled.input`
 `;
 
 const TextInput = ({ type, labelText, id, placeholder, ...props }) => (
-  <>
+  <Wrapper>
     <Label htmlFor={id}>{labelText}</Label>
     <Input id={id} type={type} placeholder={placeholder} {...props} />
-  </>
+  </Wrapper>
 );
 
 TextInput.defaultProps = {

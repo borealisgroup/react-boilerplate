@@ -2,17 +2,17 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import store from 'store/createStore';
-import StyleWrapper from 'theme/StyleWrapper';
-import { HomePage } from 'components';
+import ThemeWrapper from 'theme/ThemeWrapper';
+import { TodoPage } from 'components';
 
 const App = () => (
   <Provider store={store}>
     <BrowserRouter>
-      <StyleWrapper>
+      <ThemeWrapper>
         <Switch>
-          <Route path="/" exact component={HomePage} />
+          <Route path="/" exact component={TodoPage} />
         </Switch>
-      </StyleWrapper>
+      </ThemeWrapper>
     </BrowserRouter>
   </Provider>
 );

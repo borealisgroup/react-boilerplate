@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import theme from './theme';
 import GlobalStyle from './globalStyle';
 
-const StyleWrapper = ({ children }) => (
+const ThemeWrapper = ({ children }) => (
   <ThemeProvider theme={theme}>
     <>
       <GlobalStyle />
@@ -12,4 +12,4 @@ const StyleWrapper = ({ children }) => (
   </ThemeProvider>
 );
 
-export default StyleWrapper;
+export default ThemeWrapper;
