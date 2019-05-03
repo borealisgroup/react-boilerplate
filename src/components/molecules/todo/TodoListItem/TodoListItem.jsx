@@ -23,20 +23,24 @@ const StyledButtonWrapper = styled.div`
   width: 80px;
 `;
 
-const TodoListItem = ({ checked, onChange }) => (
+const TodoListItem = ({ checked, text, id, onChange, onRemove }) => (
   <StyledListItem>
-    <StyledParagraph checked={checked}>Create a new dashboard</StyledParagraph>
+    <StyledParagraph checked={checked}>{text}</StyledParagraph>
     <StyledButtonWrapper>
-      <RoundCheckbox checked={checked} onChange={onChange} />
-      <StyledHiddenButton>
-        <RemoveIcon />
-      </StyledHiddenButton>
+      <RoundCheckbox id={id} checked={checked} onChange={onChange} />
+      <form onSubmit={onRemove}>
+        <StyledHiddenButton>
+          <RemoveIcon />
+        </StyledHiddenButton>
+      </form>
     </StyledButtonWrapper>
   </StyledListItem>
 );
 
 TodoListItem.defaultProps = {
+  id: 1,
   checked: true,
+  text: 'Default todo text',
   onChange: () => console.info('check'),
 };
 

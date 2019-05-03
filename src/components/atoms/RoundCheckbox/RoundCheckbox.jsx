@@ -45,22 +45,23 @@ const Input = styled.input`
   }
 `;
 
-const RoundCheckbox = ({ checked, onChange, ...props }) => (
+const RoundCheckbox = ({ checked, onChange, id, ...props }) => (
   <Wrapper>
     <Input
       checked={checked}
       onChange={onChange}
       type="checkbox"
-      id="checkbox"
+      id={id}
       {...props}
     />
-    <OuterCircle htmlFor="checkbox">
+    <OuterCircle htmlFor={id}>
       <InnerCircle />
     </OuterCircle>
   </Wrapper>
 );
 
 RoundCheckbox.defaultProps = {
+  id: 1,
   checked: true,
   onChange: () => console.info('check'),
 };

@@ -8,14 +8,12 @@ const StyledList = styled.ul`
   margin: ${({ theme }) => theme.space[5]}px 0px;
 `;
 
-const TodoList = () => {
-  return (
-    <StyledList>
-      <StyledTodoListItem />
-      <StyledTodoListItem />
-      <StyledTodoListItem />
-    </StyledList>
-  );
-};
+const TodoList = ({ data }) => (
+  <StyledList>
+    {data.map(props => (
+      <StyledTodoListItem key={props.id} {...props} />
+    ))}
+  </StyledList>
+);
 
 export default TodoList;

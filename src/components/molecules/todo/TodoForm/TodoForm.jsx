@@ -12,11 +12,17 @@ const StyledAddButton = styled(StyledButton)`
   margin-left: ${({ theme }) => theme.space[3]}px;
 `;
 
-const TodoForm = () => (
-  <StyledForm>
-    <TextInput labelText="New todo" />
-    <StyledAddButton>Add</StyledAddButton>
-  </StyledForm>
-);
+const TodoForm = ({ onSubmit, onChange, value }) => {
+  return (
+    <StyledForm onSubmit={onSubmit}>
+      <TextInput onChange={onChange} value={value} labelText="New todo" />
+      <StyledAddButton>Add</StyledAddButton>
+    </StyledForm>
+  )
+};
+
+TodoForm.defaultProps = {
+  onSubmit: () => console.info('submit'),
+}
 
 export default TodoForm;
