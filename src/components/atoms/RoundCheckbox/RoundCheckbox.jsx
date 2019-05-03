@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   width: 30px;
 `;
 
-const OuterCircle = styled.label`
+const OuterCircle = styled.div`
   position: absolute;
   border: ${({ theme }) => theme.borders[1]}
     ${({ theme }) => theme.colors.primary};
@@ -54,7 +54,7 @@ const RoundCheckbox = ({ checked, onChange, id, ...props }) => (
       id={id}
       {...props}
     />
-    <OuterCircle htmlFor={id}>
+    <OuterCircle onClick={onChange}>
       <InnerCircle />
     </OuterCircle>
   </Wrapper>

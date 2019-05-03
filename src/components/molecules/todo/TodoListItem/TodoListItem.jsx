@@ -11,7 +11,7 @@ const StyledListItem = styled.li`
   align-items: center;
 `;
 
-const StyledParagraph = styled.p`
+const StyledLabel = styled.label`
   color: ${({ theme }) => theme.colors.primary};
   font-size: ${({ theme }) => theme.fontSizes[3]}px;
   ${({ checked }) => checked && `opacity: 0.5`};
@@ -25,11 +25,11 @@ const StyledButtonWrapper = styled.div`
 
 const TodoListItem = ({ checked, text, id, onChange, onRemove }) => (
   <StyledListItem>
-    <StyledParagraph checked={checked}>{text}</StyledParagraph>
+    <StyledLabel htmlFor={id} checked={checked}>{text}</StyledLabel>
     <StyledButtonWrapper>
       <RoundCheckbox id={id} checked={checked} onChange={onChange} />
       <form onSubmit={onRemove}>
-        <StyledHiddenButton>
+        <StyledHiddenButton aria-label="Remove this todo">
           <RemoveIcon />
         </StyledHiddenButton>
       </form>
