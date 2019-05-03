@@ -4,7 +4,7 @@ const initialState = {
   todos: [
     {
       id: 1,
-      text: 'I',
+      text: 'I’m your first todo 😃',
       checked: false,
     },
   ],
