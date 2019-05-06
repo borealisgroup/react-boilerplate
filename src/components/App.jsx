@@ -1,6 +1,6 @@
 import React from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
 import store from 'store/createStore';
 import ThemeWrapper from 'theme/ThemeWrapper';
 import { TodoPage } from 'components';
@@ -10,7 +10,8 @@ const App = () => (
     <BrowserRouter>
       <ThemeWrapper>
         <Switch>
-          <Route path="/" exact component={TodoPage} />
+          <Route path="/:language/todo" exact component={TodoPage} />
+          <Redirect from="/" to="/en/todo" />
         </Switch>
       </ThemeWrapper>
     </BrowserRouter>
