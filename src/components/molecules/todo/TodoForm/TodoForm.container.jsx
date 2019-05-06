@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import { connect } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { todoAdd } from 'store/todo/todo.duck';
 import TodoForm from './TodoForm';
 
-const TodoFormContainer = ({ onAdd, ...props }) => {
+const TodoFormContainer = props => {
   const [text, setText] = useState('');
+  const dispatch = useDispatch();
   const submitForm = event => {
     event.preventDefault();
-    onAdd(text);
+    dispatch(todoAdd(text));
     setText('');
   };
   return (
@@ -20,11 +21,4 @@ const TodoFormContainer = ({ onAdd, ...props }) => {
   );
 };
 
-const mapDispatchToProps = dispatch => ({
-  onAdd: text => dispatch(todoAdd(text)),
-});
-
-export default connect(
-  null,
-  mapDispatchToProps
-)(TodoFormContainer);
+export default TodoFormContainer;
