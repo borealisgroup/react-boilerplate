@@ -4,6 +4,7 @@ import { todoAdd } from 'store/todo/todo.duck';
 import TodoForm from './TodoForm';
 
 const TodoFormContainer = props => {
+  const dispatch = useDispatch();
   const [text, setText] = useState('');
   const dispatch = useDispatch();
   const submitForm = event => {
