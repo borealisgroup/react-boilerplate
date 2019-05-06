@@ -6,7 +6,6 @@ import TodoForm from './TodoForm';
 const TodoFormContainer = props => {
   const dispatch = useDispatch();
   const [text, setText] = useState('');
-  const dispatch = useDispatch();
   const submitForm = event => {
     event.preventDefault();
     dispatch(todoAdd(text));
