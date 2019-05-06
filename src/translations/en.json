@@ -1,10 +1,6 @@
 {
     "new_todo": "New todo",
-    "my_todo": "my",
-    "my_todo2": "my todo",
-    "process.env.t": "my todo",
-    "test": "my todo",
-    "test2": "my todo",
-    "test3": "my",
-    "test5": "my"
+    "todo": "todo",
+    "add": "Add",
+    "type_something": "Type something"
 }

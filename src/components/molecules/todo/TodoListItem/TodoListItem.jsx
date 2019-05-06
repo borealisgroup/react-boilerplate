@@ -20,12 +20,14 @@ const StyledLabel = styled.label`
 const StyledButtonWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  width: 80px;
+  width: 90px;
 `;
 
 const TodoListItem = ({ checked, text, id, onChange, onRemove }) => (
   <StyledListItem>
-    <StyledLabel htmlFor={id} checked={checked}>{text}</StyledLabel>
+    <StyledLabel htmlFor={id} checked={checked}>
+      {text}
+    </StyledLabel>
     <StyledButtonWrapper>
       <RoundCheckbox id={id} checked={checked} onChange={onChange} />
       <form onSubmit={onRemove}>

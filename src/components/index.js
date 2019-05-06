@@ -10,3 +10,5 @@ export { default as TodoPage } from './pages/TodoPage';
 export { default as HomeContent } from './organisms/home/HomeContent';
 export { default as HomePage } from './pages/HomePage';
 export { default as MainTemplate } from './templates/MainTemplate';
+
+export { default as Routes } from './Routes';

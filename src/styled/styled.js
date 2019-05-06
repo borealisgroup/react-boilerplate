@@ -8,7 +8,8 @@ export const StyledButton = styled.button`
     ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.transparent};
   box-sizing: border-box;
-  min-width: 80px;
+  min-width: 90px;
+  white-space: nowrap;
 `;
 
 export const StyledHiddenButton = styled.button`
