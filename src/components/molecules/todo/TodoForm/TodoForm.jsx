@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { TextInput } from 'components';
 import { StyledButton } from 'styled';
-import { useTranslation } from 'hooks';
+import { useTranslation } from 'react-i18next';
 
 const StyledForm = styled.form`
   display: flex;
@@ -14,16 +14,16 @@ const StyledAddButton = styled(StyledButton)`
 `;
 
 const TodoForm = ({ onSubmit, onChange, value }) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation('todo');
   return (
     <StyledForm onSubmit={onSubmit}>
       <TextInput
-        placeholder={t('TODO.FORM.TITLE')}
+        placeholder={t('FORM.PLACEHOLDER')}
         onChange={onChange}
         value={value}
-        labelText={t('TODO.FORM.PLACEHOLDER')}
+        labelText={t('FORM.TITLE')}
       />
-      <StyledAddButton>{t('TODO.FORM.SUBMIT')}</StyledAddButton>
+      <StyledAddButton>{t('FORM.SUBMIT')}</StyledAddButton>
     </StyledForm>
   );
 };

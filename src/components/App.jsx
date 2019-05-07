@@ -1,19 +1,21 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { Provider } from 'react-redux';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import store from 'store/createStore';
 import ThemeWrapper from 'theme/ThemeWrapper';
-import { Routes } from 'components';
+import { TodoPage } from 'components';
 
 const App = () => (
   <Provider store={store}>
     <ThemeWrapper>
-      <BrowserRouter>
-        <Route path="/:language(en|fr|nl)?">
-          <Routes />
-        </Route>
-      </BrowserRouter>
+      <Suspense fallback={<div />}>
+        <BrowserRouter>
+          <Switch>
+            <Route path="/" exact component={TodoPage} />
+          </Switch>
+        </BrowserRouter>
+      </Suspense>
     </ThemeWrapper>
   </Provider>
 );
