@@ -18,12 +18,12 @@ const TodoForm = ({ onSubmit, onChange, value }) => {
   return (
     <StyledForm onSubmit={onSubmit}>
       <TextInput
-        placeholder={t('type_something')}
+        placeholder={t('TODO.FORM.TITLE')}
         onChange={onChange}
         value={value}
-        labelText={t('new_todo')}
+        labelText={t('TODO.FORM.PLACEHOLDER')}
       />
-      <StyledAddButton>{t('add')}</StyledAddButton>
+      <StyledAddButton>{t('TODO.FORM.SUBMIT')}</StyledAddButton>
     </StyledForm>
   );
 };

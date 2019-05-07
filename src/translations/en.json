@@ -1,6 +1,5 @@
 {
-    "new_todo": "New todo",
-    "todo": "todo",
-    "add": "Add",
-    "type_something": "Type something"
+    "TODO.FORM.TITLE": "New todo",
+    "TODO.FORM.SUBMIT": "Add",
+    "TODO.FORM.PLACEHOLDER": "Type something"
 }

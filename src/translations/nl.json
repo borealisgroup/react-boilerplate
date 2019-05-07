@@ -1,6 +1,5 @@
 {
-    "new_todo": "Nieuwe taak",
-    "todo": "taak",
-    "add": "Voeg toe",
-    "type_something": "Schrijf iets"
+    "TODO.FORM.TITLE": "Nieuwe taak",
+    "TODO.FORM.SUBMIT": "Voeg toe",
+    "TODO.FORM.PLACEHOLDER": "Schrijf iets"
 }
