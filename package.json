@@ -34,7 +34,7 @@
   "dependencies": {
     "@rescripts/cli": "0.0.10",
     "@rescripts/rescript-env": "0.0.10",
-    "@borealisgroup/theme": "^1.7.1",
+    "@borealisgroup/theme": "^1.7.3",
     "cross-env": "5.2.0",
     "react": "^16.8.6",
     "react-app-polyfill": "^1.0.0",
@@ -50,10 +50,10 @@
     "styled-components": "4.2.0"
   },
   "devDependencies": {
-    "@borealisgroup/eslint-config": "^1.5.0",
-    "@borealisgroup/stylelint-config": "^1.2.4",
+    "@borealisgroup/eslint-config": "^1.7.3",
+    "@borealisgroup/stylelint-config": "^1.7.3",
     "husky": "^2.2.0",
-    "lint-staged": "^8.1.5",
+    "lint-staged": "^8.1.6",
     "npm-run-all": "^4.1.5",
     "redux-logger": "^3.0.6",
     "source-map-explorer": "^1.8.0"
