@@ -19,10 +19,7 @@
     "storybook": "cross-env NODE_PATH=src start-storybook",
     "test:CI": "cross-env CI=true react-scripts test --env=jsdom --modulePaths=src",
     "test:coverage": "react-scripts test --coverage --modulePaths=src",
-    "test": "react-scripts test --modulePaths=src",
-    "validate": "npm-run-all lint test",
-    "i18n:get": "poeditor pull",
-    "i18n:add": "poeditor add ${a} ${b} && poeditor push && npm run i18n:get"
+    "test": "react-scripts test --modulePaths=src"
   },
   "husky": {
     "hooks": {
@@ -62,7 +59,6 @@
     "husky": "^2.2.0",
     "lint-staged": "^8.1.5",
     "npm-run-all": "^4.1.5",
-    "poeditor-cli": "^1.1.1",
     "redux-logger": "^3.0.6",
     "serve": "^11.0.0",
     "source-map-explorer": "^1.8.0"
