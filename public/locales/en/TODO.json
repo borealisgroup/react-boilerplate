@@ -1,8 +1,10 @@
 {
   "FORM": {
+    "EXAMPLE": "FORM.EXAMPLE",
     "PLACEHOLDER": "Type anything",
     "SUBMIT": "Add",
     "SUBTITLE": "A subtitle",
+    "TEST": "this is my test",
     "TITLE": "Add a todo"
   }
 }

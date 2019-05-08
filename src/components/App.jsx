@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
+import I18n from 'I18n';
 import store from 'store/createStore';
 import ThemeWrapper from 'theme/ThemeWrapper';
 import { TodoPage } from 'components';
@@ -9,13 +10,15 @@ import { TodoPage } from 'components';
 const App = () => (
   <Provider store={store}>
     <ThemeWrapper>
-      <Suspense fallback={<div />}>
-        <BrowserRouter>
-          <Switch>
-            <Route path="/" exact component={TodoPage} />
-          </Switch>
-        </BrowserRouter>
-      </Suspense>
+      <I18n>
+        <Suspense fallback={<div />}>
+          <BrowserRouter>
+            <Switch>
+              <Route path="/" exact component={TodoPage} />
+            </Switch>
+          </BrowserRouter>
+        </Suspense>
+      </I18n>
     </ThemeWrapper>
   </Provider>
 );
