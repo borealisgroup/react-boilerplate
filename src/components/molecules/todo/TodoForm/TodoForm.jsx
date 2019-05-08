@@ -14,7 +14,7 @@ const StyledAddButton = styled(StyledButton)`
 `;
 
 const TodoForm = ({ onSubmit, onChange, value }) => {
-  const { t } = useTranslation('todo');
+  const { t } = useTranslation('TODO');
   return (
     <StyledForm onSubmit={onSubmit}>
       <TextInput

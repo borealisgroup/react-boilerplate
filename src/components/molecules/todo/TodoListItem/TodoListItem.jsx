@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { RoundCheckbox } from 'components';
 import { ReactComponent as RemoveIcon } from 'assets/icons/remove.svg';
 import { StyledHiddenButton } from 'styled';
+import { useTranslation } from 'react-i18next';
 
 const StyledListItem = styled.li`
   margin: ${({ theme }) => theme.space[4]}px 0px;
@@ -23,21 +24,24 @@ const StyledButtonWrapper = styled.div`
   width: 90px;
 `;
 
-const TodoListItem = ({ checked, text, id, onChange, onRemove }) => (
-  <StyledListItem>
-    <StyledLabel htmlFor={id} checked={checked}>
-      {text}
-    </StyledLabel>
-    <StyledButtonWrapper>
-      <RoundCheckbox id={id} checked={checked} onChange={onChange} />
-      <form onSubmit={onRemove}>
-        <StyledHiddenButton aria-label="Remove this todo">
-          <RemoveIcon />
-        </StyledHiddenButton>
-      </form>
-    </StyledButtonWrapper>
-  </StyledListItem>
-);
+const TodoListItem = ({ checked, text, id, onChange, onRemove }) => {
+  const { t } = useTranslation('LIST');
+  return (
+    <StyledListItem>
+      <StyledLabel htmlFor={id} checked={checked}>
+        {text}
+      </StyledLabel>
+      <StyledButtonWrapper>
+        <RoundCheckbox id={id} checked={checked} onChange={onChange} />
+        <form onSubmit={onRemove}>
+          <StyledHiddenButton aria-label={t('ACTION.REMOVE')}>
+            <RemoveIcon />
+          </StyledHiddenButton>
+        </form>
+      </StyledButtonWrapper>
+    </StyledListItem>
+  );
+};
 
 TodoListItem.defaultProps = {
   id: 1,
