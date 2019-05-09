@@ -5,7 +5,7 @@
   "scripts": {
     "analyze:ci": "source-map-explorer --html build/static/js/*.js > source-map-result.html",
     "analyze": "npm run build && source-map-explorer 'build/static/js/*.js'",
-    "build": "npm run locize:download && rescripts build",
+    "build": "npm run i18n:switch-to-prod && rescripts build",
     "clean": "rm -rf node_modules",
     "eject": "react-scripts eject",
     "format": "prettier-eslint \"src/**/*.{js,jsx}\" --write",
@@ -15,11 +15,13 @@
     "rebuild": "npm run clean && npm install && npm run build",
     "reinstall": "npm run clean && npm install",
     "serve": "npm run build && serve -s build",
-    "start": "rescripts start",
+    "start": "npm run i18n:switch-to-dev && rescripts start",
     "storybook": "cross-env NODE_PATH=src start-storybook",
     "test:CI": "cross-env CI=true react-scripts test --env=jsdom --modulePaths=src",
     "test:coverage": "react-scripts test --coverage --modulePaths=src",
     "test": "react-scripts test --modulePaths=src",
+    "i18n:switch-to-dev": "rm \"src/i18n/index.js\" && echo \"export { default as I18n } from './I18nDev';\r\" > \"src/i18n/index.js\"",
+    "i18n:switch-to-prod": "rm \"src/i18n/index.js\" && echo \"export { default as I18n } from './I18nProd';\r\" > \"src/i18n/index.js\" && npm run locize:download",
     "locize:download": "locize download --project-id 1d072bea-f59b-452d-9507-6e6de927b0b1 --ver latest --path ./public/locales"
   },
   "husky": {
@@ -35,7 +37,8 @@
   },
   "dependencies": {
     "@borealisgroup/components": "^1.7.3",
-    "@borealisgroup/i18n": "file:../borealis-js/packages/i18n",
+    "@borealisgroup/i18n-dev": "^1.7.6",
+    "@borealisgroup/i18n-prod": "^1.7.6",
     "@borealisgroup/theme": "^1.7.3",
     "@rescripts/cli": "0.0.10",
     "@rescripts/rescript-env": "0.0.10",
@@ -60,6 +63,7 @@
     "@borealisgroup/stylelint-config": "^1.7.3",
     "husky": "^2.2.0",
     "lint-staged": "^8.1.6",
+    "locize-cli": "^4.7.7",
     "npm-run-all": "^4.1.5",
     "redux-logger": "^3.0.6",
     "serve": "^11.0.0",

@@ -2,7 +2,7 @@ import React, { Suspense } from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import I18n from 'I18n';
+import { I18n } from 'i18n';
 import store from 'store/createStore';
 import ThemeWrapper from 'theme/ThemeWrapper';
 import { TodoPage } from 'components';
